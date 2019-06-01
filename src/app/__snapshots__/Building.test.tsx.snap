@@ -108,6 +108,88 @@ exports[`Building draws three floors 1`] = `
 </Building>
 `;
 
+exports[`Building draws two floors 1`] = `
+<Building
+  floors={2}
+>
+  <div>
+    <span>
+      Building
+    </span>
+    <Component>
+      <div>
+        <span>
+          Lift's panel
+        </span>
+        <ul>
+          <li>
+            5
+          </li>
+          <li>
+            4
+          </li>
+          <li>
+            3
+          </li>
+          <li>
+            2
+          </li>
+          <li>
+            1
+          </li>
+        </ul>
+      </div>
+    </Component>
+    <Floor
+      firstLevel={false}
+      key="1"
+      lastLevel={true}
+      level={2}
+    >
+      <div>
+        <span>
+          Floor 
+          2
+        </span>
+        <Component
+          downButton={true}
+          upButton={false}
+        >
+          <ul>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Floor>
+    <Floor
+      firstLevel={true}
+      key="0"
+      lastLevel={false}
+      level={1}
+    >
+      <div>
+        <span>
+          Floor 
+          1
+        </span>
+        <Component
+          downButton={false}
+          upButton={true}
+        >
+          <ul>
+            <li>
+              Up
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Floor>
+  </div>
+</Building>
+`;
+
 exports[`Building exists 1`] = `
 <Building
   floors={1}
