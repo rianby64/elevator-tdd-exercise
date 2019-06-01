@@ -16,10 +16,27 @@ interface DefaultProps {
     currentLevel: number;
 }
 
+interface LiftState {
+    highlightedButtons: Set<number>;
+}
+
 export class Lift extends React.Component<LiftProps & DefaultProps> {
 
     public static defaultProps: DefaultProps = {
         currentLevel: 1,
+    }
+
+    public state: LiftState = {
+        highlightedButtons: new Set([]),
+    }
+
+    private highlightButton = (i: number): () => void => {
+        return (): void => {
+            this.setState((state: LiftState): LiftState => {
+                const highlightedButtons = new Set([...state.highlightedButtons, i]);
+                return {...state, highlightedButtons: highlightedButtons};
+            });
+        }
     }
 
     public render(): JSX.Element {
@@ -28,6 +45,8 @@ export class Lift extends React.Component<LiftProps & DefaultProps> {
                 {this.props.direction ?
                     <span>Going {this.props.direction}</span> : null}
                 <LiftPanel
+                    highlightButton={this.highlightButton}
+                    highlightedButtons={this.state.highlightedButtons}
                     floors={this.props.floors}
                     currentLevel={this.props.currentLevel} />
             </div>

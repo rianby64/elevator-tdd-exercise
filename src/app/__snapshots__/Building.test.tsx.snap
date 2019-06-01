@@ -16,6 +16,8 @@ exports[`Building draws three floors 1`] = `
         <LiftPanel
           currentLevel={1}
           floors={3}
+          highlightButton={[Function]}
+          highlightedButtons={Set {}}
         >
           <div>
             <span>
@@ -152,6 +154,8 @@ exports[`Building draws two floors 1`] = `
         <LiftPanel
           currentLevel={1}
           floors={2}
+          highlightButton={[Function]}
+          highlightedButtons={Set {}}
         >
           <div>
             <span>

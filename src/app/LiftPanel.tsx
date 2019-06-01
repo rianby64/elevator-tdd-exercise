@@ -4,25 +4,18 @@ import * as React from 'react';
 interface LiftPanelProps {
     floors: number;
     currentLevel: number;
+    highlightedButtons?: Set<number>;
+    highlightButton?: (i: number) => () => void;
 }
 
-interface LiftPanelState {
-    highlightButtons: Set<number>;
+interface DefaultProps {
+    highlightedButtons: Set<number>;
 }
 
-export class LiftPanel extends React.Component<LiftPanelProps> {
+export class LiftPanel extends React.Component<LiftPanelProps & DefaultProps> {
 
-    public state: LiftPanelState = {
-        highlightButtons: new Set([])
-    }
-
-    private highlightButton(i: number): () => void {
-        return (): void => {
-            this.setState((state: LiftPanelState): LiftPanelState => {
-                const highlightButtons = new Set([...state.highlightButtons, i]);
-                return {...state, highlightButtons: highlightButtons};
-            });
-        }
+    public static defaultProps: DefaultProps = {
+        highlightedButtons: new Set([])
     }
 
     private createButtons = (): JSX.Element[] => new Array(this.props.floors)
@@ -33,9 +26,9 @@ export class LiftPanel extends React.Component<LiftPanelProps> {
                 className={this.props.currentLevel === (i + 1) ?
                     "active" : undefined}>
                 <button
-                    className={this.state.highlightButtons.has(i + 1) ?
+                    className={this.props.highlightedButtons.has(i + 1) ?
                         "highlight" : undefined}
-                    onClick={this.highlightButton(i + 1)}>{i + 1}</button>
+                    onClick={this.props.highlightButton && this.props.highlightButton(i + 1)}>{i + 1}</button>
             </li>;
         })
         .reverse()

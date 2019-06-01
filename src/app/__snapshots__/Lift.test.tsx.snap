@@ -9,6 +9,8 @@ exports[`Lift highlighs the currentLevel 1`] = `
     <LiftPanel
       currentLevel={3}
       floors={5}
+      highlightButton={[Function]}
+      highlightedButtons={Set {}}
     >
       <div>
         <span>
@@ -82,6 +84,8 @@ exports[`Lift highlighs the currentLevel and shows the direction 1`] = `
     <LiftPanel
       currentLevel={3}
       floors={5}
+      highlightButton={[Function]}
+      highlightedButtons={Set {}}
     >
       <div>
         <span>

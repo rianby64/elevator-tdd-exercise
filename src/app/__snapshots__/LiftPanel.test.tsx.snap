@@ -4,6 +4,7 @@ exports[`LiftPanel highlighs the currentLevel 1`] = `
 <LiftPanel
   currentLevel={3}
   floors={5}
+  highlightedButtons={Set {}}
 >
   <div>
     <span>
@@ -13,18 +14,14 @@ exports[`LiftPanel highlighs the currentLevel 1`] = `
       <li
         key="4"
       >
-        <button
-          onClick={[Function]}
-        >
+        <button>
           5
         </button>
       </li>
       <li
         key="3"
       >
-        <button
-          onClick={[Function]}
-        >
+        <button>
           4
         </button>
       </li>
@@ -32,89 +29,21 @@ exports[`LiftPanel highlighs the currentLevel 1`] = `
         className="active"
         key="2"
       >
-        <button
-          onClick={[Function]}
-        >
+        <button>
           3
         </button>
       </li>
       <li
         key="1"
       >
-        <button
-          onClick={[Function]}
-        >
+        <button>
           2
         </button>
       </li>
       <li
         key="0"
       >
-        <button
-          onClick={[Function]}
-        >
-          1
-        </button>
-      </li>
-    </ul>
-  </div>
-</LiftPanel>
-`;
-
-exports[`LiftPanel highlighs the pressed button 1`] = `
-<LiftPanel
-  currentLevel={3}
-  floors={5}
->
-  <div>
-    <span>
-      Lift's panel
-    </span>
-    <ul>
-      <li
-        key="4"
-      >
-        <button
-          onClick={[Function]}
-        >
-          5
-        </button>
-      </li>
-      <li
-        key="3"
-      >
-        <button
-          onClick={[Function]}
-        >
-          4
-        </button>
-      </li>
-      <li
-        className="active"
-        key="2"
-      >
-        <button
-          className="highlight"
-          onClick={[Function]}
-        >
-          3
-        </button>
-      </li>
-      <li
-        key="1"
-      >
-        <button
-          onClick={[Function]}
-        >
-          2
-        </button>
-      </li>
-      <li
-        key="0"
-      >
-        <button
-          onClick={[Function]}
-        >
+        <button>
           1
         </button>
       </li>
