@@ -25,18 +25,30 @@ exports[`Building draws three floors 1`] = `
               <li
                 key="2"
               >
-                3
+                <button
+                  onClick={[Function]}
+                >
+                  3
+                </button>
               </li>
               <li
                 key="1"
               >
-                2
+                <button
+                  onClick={[Function]}
+                >
+                  2
+                </button>
               </li>
               <li
                 className="active"
                 key="0"
               >
-                1
+                <button
+                  onClick={[Function]}
+                >
+                  1
+                </button>
               </li>
             </ul>
           </div>
@@ -149,13 +161,21 @@ exports[`Building draws two floors 1`] = `
               <li
                 key="1"
               >
-                2
+                <button
+                  onClick={[Function]}
+                >
+                  2
+                </button>
               </li>
               <li
                 className="active"
                 key="0"
               >
-                1
+                <button
+                  onClick={[Function]}
+                >
+                  1
+                </button>
               </li>
             </ul>
           </div>

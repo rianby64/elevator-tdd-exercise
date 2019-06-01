@@ -12,10 +12,22 @@ interface DefaultProps {
     floors: number;
 }
 
+interface BuildState {
+    lift: {
+        currentLevel: number;
+    };
+}
+
 export class Building extends React.Component<BuildingProps> {
 
     public static defaultProps: DefaultProps = {
         floors: 1,
+    }
+
+    public state: BuildState = {
+        lift: {
+            currentLevel: 1,
+        }
     }
 
     private createFloors = (): JSX.Element[] => new Array(this.props.floors)
@@ -41,7 +53,9 @@ export class Building extends React.Component<BuildingProps> {
         return this.props.floors == 1 ? this.renderOneFloor() : (
             <div>
                 <span>Building</span>
-                <Lift floors={this.props.floors} />
+                <Lift
+                    floors={this.props.floors}
+                    currentLevel={this.state.lift.currentLevel} />
                 {this.createFloors()}
             </div>
         );

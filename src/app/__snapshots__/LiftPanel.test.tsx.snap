@@ -13,28 +13,110 @@ exports[`LiftPanel highlighs the currentLevel 1`] = `
       <li
         key="4"
       >
-        5
+        <button
+          onClick={[Function]}
+        >
+          5
+        </button>
       </li>
       <li
         key="3"
       >
-        4
+        <button
+          onClick={[Function]}
+        >
+          4
+        </button>
       </li>
       <li
         className="active"
         key="2"
       >
-        3
+        <button
+          onClick={[Function]}
+        >
+          3
+        </button>
       </li>
       <li
         key="1"
       >
-        2
+        <button
+          onClick={[Function]}
+        >
+          2
+        </button>
       </li>
       <li
         key="0"
       >
-        1
+        <button
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </li>
+    </ul>
+  </div>
+</LiftPanel>
+`;
+
+exports[`LiftPanel highlighs the pressed button 1`] = `
+<LiftPanel
+  currentLevel={3}
+  floors={5}
+>
+  <div>
+    <span>
+      Lift's panel
+    </span>
+    <ul>
+      <li
+        key="4"
+      >
+        <button
+          onClick={[Function]}
+        >
+          5
+        </button>
+      </li>
+      <li
+        key="3"
+      >
+        <button
+          onClick={[Function]}
+        >
+          4
+        </button>
+      </li>
+      <li
+        className="active"
+        key="2"
+      >
+        <button
+          className="highlight"
+          onClick={[Function]}
+        >
+          3
+        </button>
+      </li>
+      <li
+        key="1"
+      >
+        <button
+          onClick={[Function]}
+        >
+          2
+        </button>
+      </li>
+      <li
+        key="0"
+      >
+        <button
+          onClick={[Function]}
+        >
+          1
+        </button>
       </li>
     </ul>
   </div>

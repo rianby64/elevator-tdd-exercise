@@ -18,28 +18,48 @@ exports[`Lift highlighs the currentLevel 1`] = `
           <li
             key="4"
           >
-            5
+            <button
+              onClick={[Function]}
+            >
+              5
+            </button>
           </li>
           <li
             key="3"
           >
-            4
+            <button
+              onClick={[Function]}
+            >
+              4
+            </button>
           </li>
           <li
             className="active"
             key="2"
           >
-            3
+            <button
+              onClick={[Function]}
+            >
+              3
+            </button>
           </li>
           <li
             key="1"
           >
-            2
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
           </li>
           <li
             key="0"
           >
-            1
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
           </li>
         </ul>
       </div>
@@ -71,28 +91,48 @@ exports[`Lift highlighs the currentLevel and shows the direction 1`] = `
           <li
             key="4"
           >
-            5
+            <button
+              onClick={[Function]}
+            >
+              5
+            </button>
           </li>
           <li
             key="3"
           >
-            4
+            <button
+              onClick={[Function]}
+            >
+              4
+            </button>
           </li>
           <li
             className="active"
             key="2"
           >
-            3
+            <button
+              onClick={[Function]}
+            >
+              3
+            </button>
           </li>
           <li
             key="1"
           >
-            2
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
           </li>
           <li
             key="0"
           >
-            1
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
           </li>
         </ul>
       </div>
