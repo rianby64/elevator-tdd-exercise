@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Floor exists 1`] = `
+<Component
+  level={1}
+>
+  <div>
+    <span>
+      Floor 
+      1
+    </span>
+    <Component>
+      <ul>
+        <li>
+          Up
+        </li>
+        <li>
+          Down
+        </li>
+      </ul>
+    </Component>
+  </div>
+</Component>
+`;

@@ -20,7 +20,7 @@ export class Building extends React.Component<BuildingProps> {
 
     private createFloors(): JSX.Element[] {
         return new Array(this.props.floors).fill(undefined).map((v: undefined, i: number): JSX.Element => {
-            return <Floor key={i}/>
+            return <Floor key={i} level={i + 1}/>
         });
     }
 

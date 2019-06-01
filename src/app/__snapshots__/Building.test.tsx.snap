@@ -34,10 +34,12 @@ exports[`Building draws three floors 1`] = `
     </Component>
     <Component
       key="0"
+      level={1}
     >
       <div>
         <span>
-          Floor 3
+          Floor 
+          1
         </span>
         <Component>
           <ul>
@@ -53,10 +55,12 @@ exports[`Building draws three floors 1`] = `
     </Component>
     <Component
       key="1"
+      level={2}
     >
       <div>
         <span>
-          Floor 3
+          Floor 
+          2
         </span>
         <Component>
           <ul>
@@ -72,10 +76,12 @@ exports[`Building draws three floors 1`] = `
     </Component>
     <Component
       key="2"
+      level={3}
     >
       <div>
         <span>
-          Floor 3
+          Floor 
+          3
         </span>
         <Component>
           <ul>

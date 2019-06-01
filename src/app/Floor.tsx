@@ -3,7 +3,7 @@ import * as React from 'react';
 import { FloorPanel } from './FloorPanel';
 
 interface FloorProps {
-
+    level: number;
 }
 
 type FloorElement = React.ReactElement<FloorProps>;
@@ -11,7 +11,7 @@ type FloorElement = React.ReactElement<FloorProps>;
 export const Floor = (props: FloorProps): FloorElement => {
     return (
         <div>
-            <span>Floor 3</span>
+            <span>Floor {props.level}</span>
             <FloorPanel />
         </div>
     );
