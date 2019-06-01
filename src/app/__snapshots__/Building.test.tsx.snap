@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Building exists 1`] = `
-<Component>
+exports[`Building draws three floors 1`] = `
+<Building
+  floors={3}
+>
   <div>
     <span>
       Building
@@ -76,84 +78,15 @@ exports[`Building exists 1`] = `
       </Component>
     </div>
   </div>
-</Component>
+</Building>
 `;
 
-exports[`Summ exists 1`] = `
-<Component>
+exports[`Building exists 1`] = `
+<Building
+  floors={1}
+>
   <div>
-    <span>
-      Building
-    </span>
-    <Component>
-      <div>
-        <span>
-          Lift's panel
-        </span>
-        <ul>
-          <li>
-            5
-          </li>
-          <li>
-            4
-          </li>
-          <li>
-            3
-          </li>
-          <li>
-            2
-          </li>
-          <li>
-            1
-          </li>
-        </ul>
-      </div>
-    </Component>
-    <div>
-      <span>
-        Floor 3
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
-    <div>
-      <span>
-        Floor 2
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
-    <div>
-      <span>
-        Floor 1
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
+    This is just a House
   </div>
-</Component>
+</Building>
 `;

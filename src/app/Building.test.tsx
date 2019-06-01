@@ -8,3 +8,9 @@ test('Building exists', (): void => {
     const sh = mount(el);
     expect(sh).toMatchSnapshot();
 });
+
+test('Building draws three floors', (): void => {
+    const el = (<Building floors={3} />);
+    const sh = mount(el);
+    expect(sh).toMatchSnapshot();
+});

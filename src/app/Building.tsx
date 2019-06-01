@@ -5,27 +5,43 @@ import { LiftPanel } from './LiftPanel';
 import { FloorPanel } from './FloorPanel';
 
 interface BuildingProps {
+    floors: number;
 }
 
-type BuildingElement = React.ReactElement<BuildingProps>;
+interface DefaultProps {
+    floors: number;
+}
 
-export const Building = (props: BuildingProps): BuildingElement => {
-    return (
-        <div>
-            <span>Building</span>
-            <LiftPanel />
+export class Building extends React.Component<BuildingProps> {
+
+    public static defaultProps: DefaultProps = {
+        floors: 1,
+    }
+
+    private renderOneFloor(): JSX.Element {
+        return (
+            <div>This is just a House</div>
+        );
+    }
+
+    public render(): JSX.Element {
+        return this.props.floors == 1 ? this.renderOneFloor() : (
             <div>
-                <span>Floor 3</span>
-                <FloorPanel />
+                <span>Building</span>
+                <LiftPanel />
+                <div>
+                    <span>Floor 3</span>
+                    <FloorPanel />
+                </div>
+                <div>
+                    <span>Floor 2</span>
+                    <FloorPanel />
+                </div>
+                <div>
+                    <span>Floor 1</span>
+                    <FloorPanel />
+                </div>
             </div>
-            <div>
-                <span>Floor 2</span>
-                <FloorPanel />
-            </div>
-            <div>
-                <span>Floor 1</span>
-                <FloorPanel />
-            </div>
-        </div>
-    );
+        );
+    }
 }
