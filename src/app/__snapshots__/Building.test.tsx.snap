@@ -10,6 +10,7 @@ exports[`Building draws three floors 1`] = `
     </span>
     <LiftPanel
       currentLevel={1}
+      floors={3}
     >
       <div>
         <span>
@@ -17,6 +18,17 @@ exports[`Building draws three floors 1`] = `
         </span>
         <ul>
           <li
+            key="2"
+          >
+            3
+          </li>
+          <li
+            key="1"
+          >
+            2
+          </li>
+          <li
+            className="active"
             key="0"
           >
             1
@@ -110,6 +122,7 @@ exports[`Building draws two floors 1`] = `
     </span>
     <LiftPanel
       currentLevel={1}
+      floors={2}
     >
       <div>
         <span>
@@ -117,6 +130,12 @@ exports[`Building draws two floors 1`] = `
         </span>
         <ul>
           <li
+            key="1"
+          >
+            2
+          </li>
+          <li
+            className="active"
             key="0"
           >
             1

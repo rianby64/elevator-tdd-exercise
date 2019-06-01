@@ -9,7 +9,6 @@ interface DefaultProps {
     currentLevel: number;
 }
 
-
 export class LiftPanel extends React.Component<LiftPanelProps> {
 
     public static defaultProps: DefaultProps = {
@@ -19,7 +18,10 @@ export class LiftPanel extends React.Component<LiftPanelProps> {
     private createButtons = (): JSX.Element[] => new Array(this.props.floors)
         .fill(undefined)
         .map((v: undefined, i: number): JSX.Element => {
-            return <li key={i}>{i + 1}</li>
+            return <li
+                key={i}
+                className={this.props.currentLevel === (i + 1) ?
+                    "active" : undefined}>{i + 1}</li>;
         })
         .reverse()
 
