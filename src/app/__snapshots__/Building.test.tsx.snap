@@ -8,30 +8,22 @@ exports[`Building draws three floors 1`] = `
     <span>
       Building
     </span>
-    <Component>
+    <LiftPanel
+      currentLevel={1}
+    >
       <div>
         <span>
           Lift's panel
         </span>
         <ul>
-          <li>
-            5
-          </li>
-          <li>
-            4
-          </li>
-          <li>
-            3
-          </li>
-          <li>
-            2
-          </li>
-          <li>
+          <li
+            key="0"
+          >
             1
           </li>
         </ul>
       </div>
-    </Component>
+    </LiftPanel>
     <Floor
       firstLevel={false}
       key="2"
@@ -116,30 +108,22 @@ exports[`Building draws two floors 1`] = `
     <span>
       Building
     </span>
-    <Component>
+    <LiftPanel
+      currentLevel={1}
+    >
       <div>
         <span>
           Lift's panel
         </span>
         <ul>
-          <li>
-            5
-          </li>
-          <li>
-            4
-          </li>
-          <li>
-            3
-          </li>
-          <li>
-            2
-          </li>
-          <li>
+          <li
+            key="0"
+          >
             1
           </li>
         </ul>
       </div>
-    </Component>
+    </LiftPanel>
     <Floor
       firstLevel={false}
       key="1"

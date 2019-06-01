@@ -18,8 +18,9 @@ export class Building extends React.Component<BuildingProps> {
         floors: 1,
     }
 
-    private createFloors(): JSX.Element[] {
-        return new Array(this.props.floors).fill(undefined).map((v: undefined, i: number, arr: undefined[]): JSX.Element => {
+    private createFloors = (): JSX.Element[] => new Array(this.props.floors)
+        .fill(undefined)
+        .map((v: undefined, i: number, arr: undefined[]): JSX.Element => {
             if (i === 0) {
                 return <Floor key={i} level={i + 1} firstLevel={true} />;
             }
@@ -27,8 +28,8 @@ export class Building extends React.Component<BuildingProps> {
                 return <Floor key={i} level={i + 1} lastLevel={true} />;
             }
             return <Floor key={i} level={i + 1}/>;
-        }).reverse();
-    }
+        })
+        .reverse()
 
     private renderOneFloor(): JSX.Element {
         return (
@@ -40,7 +41,7 @@ export class Building extends React.Component<BuildingProps> {
         return this.props.floors == 1 ? this.renderOneFloor() : (
             <div>
                 <span>Building</span>
-                <LiftPanel />
+                <LiftPanel floors={this.props.floors} />
                 {this.createFloors()}
             </div>
         );
