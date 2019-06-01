@@ -27,3 +27,14 @@ test('Lift highlighs a pressed button', (): void => {
     sh.find('LiftPanel ul').findWhere(el => el.key() === '2').find('button').simulate('click');
     expect(sh).toMatchSnapshot();
 });
+
+test('Lift notifies the pressed button', (): void => {
+    let pressedButton: number = 0;
+    const onHighlightButton = (i: number): void => {
+        pressedButton = i;
+    }
+    const el = (<Lift currentLevel={3} floors={5} onHighlightButton={onHighlightButton}/>);
+    const sh = mount(el);
+    sh.find('LiftPanel ul').findWhere(el => el.key() === '2').find('button').simulate('click');
+    expect(pressedButton).toBe(3);
+});

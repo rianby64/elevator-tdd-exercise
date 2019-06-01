@@ -11,6 +11,7 @@ interface LiftProps {
     direction?: Direction;
     floors: number;
     currentLevel?: number;
+    onHighlightButton?: (i: number) => void;
 }
 interface DefaultProps {
     currentLevel: number;
@@ -36,6 +37,9 @@ export class Lift extends React.Component<LiftProps & DefaultProps> {
                 const highlightedButtons = new Set([...state.highlightedButtons, i]);
                 return {...state, highlightedButtons: highlightedButtons};
             });
+            if (this.props.onHighlightButton) {
+                this.props.onHighlightButton(i);
+            }
         }
     }
 
