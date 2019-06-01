@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LiftPanel highlighs the currentLevel 1`] = `
+exports[`LiftPanel highlights the currentLevel 1`] = `
 <LiftPanel
   currentLevel={3}
   floors={5}
@@ -37,6 +37,67 @@ exports[`LiftPanel highlighs the currentLevel 1`] = `
         key="1"
       >
         <button>
+          2
+        </button>
+      </li>
+      <li
+        key="0"
+      >
+        <button>
+          1
+        </button>
+      </li>
+    </ul>
+  </div>
+</LiftPanel>
+`;
+
+exports[`LiftPanel highlights the given set of buttons 1`] = `
+<LiftPanel
+  currentLevel={3}
+  floors={5}
+  highlightedButtons={
+    Set {
+      3,
+      2,
+    }
+  }
+>
+  <div>
+    <span>
+      Lift's panel
+    </span>
+    <ul>
+      <li
+        key="4"
+      >
+        <button>
+          5
+        </button>
+      </li>
+      <li
+        key="3"
+      >
+        <button>
+          4
+        </button>
+      </li>
+      <li
+        className="active"
+        key="2"
+      >
+        <button
+          className="highlight"
+        >
+          3
+        </button>
+      </li>
+      <li
+        key="1"
+      >
+        <button
+          className="highlight"
+        >
           2
         </button>
       </li>
