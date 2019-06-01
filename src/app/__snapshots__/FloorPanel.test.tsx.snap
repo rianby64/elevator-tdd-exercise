@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FloorPanel has down button 1`] = `
+<Component
+  downButton={true}
+  upButton={false}
+>
+  <ul>
+    <li>
+      Down
+    </li>
+  </ul>
+</Component>
+`;
+
+exports[`FloorPanel has no buttons 1`] = `
+<Component
+  downButton={false}
+  upButton={false}
+>
+  <div />
+</Component>
+`;
+
+exports[`FloorPanel has only up button 1`] = `
+<Component
+  downButton={false}
+  upButton={true}
+>
+  <ul>
+    <li>
+      Up
+    </li>
+  </ul>
+</Component>
+`;
+
+exports[`FloorPanel has up and down buttons 1`] = `
+<Component
+  downButton={true}
+  upButton={true}
+>
+  <ul>
+    <li>
+      Up
+    </li>
+    <li>
+      Down
+    </li>
+  </ul>
+</Component>
+`;

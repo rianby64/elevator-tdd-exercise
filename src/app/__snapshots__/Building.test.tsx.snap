@@ -43,7 +43,10 @@ exports[`Building draws three floors 1`] = `
           Floor 
           3
         </span>
-        <Component>
+        <Component
+          downButton={true}
+          upButton={true}
+        >
           <ul>
             <li>
               Up
@@ -66,7 +69,10 @@ exports[`Building draws three floors 1`] = `
           Floor 
           2
         </span>
-        <Component>
+        <Component
+          downButton={true}
+          upButton={true}
+        >
           <ul>
             <li>
               Up
@@ -89,7 +95,10 @@ exports[`Building draws three floors 1`] = `
           Floor 
           1
         </span>
-        <Component>
+        <Component
+          downButton={true}
+          upButton={true}
+        >
           <ul>
             <li>
               Up
