@@ -24,7 +24,9 @@ export class Floor extends React.Component<FloorProps> {
         return (
             <div>
                 <span>Floor {this.props.level}</span>
-                <FloorPanel upButton={true} downButton={true} />
+                <FloorPanel
+                    upButton={!this.props.lastLevel}
+                    downButton={!this.props.firstLevel} />
             </div>
         );
     }

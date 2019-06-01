@@ -27,3 +27,53 @@ exports[`Floor exists 1`] = `
   </div>
 </Floor>
 `;
+
+exports[`Floor is at the first level 1`] = `
+<Floor
+  firstLevel={true}
+  lastLevel={false}
+  level={1}
+>
+  <div>
+    <span>
+      Floor 
+      1
+    </span>
+    <Component
+      downButton={false}
+      upButton={true}
+    >
+      <ul>
+        <li>
+          Up
+        </li>
+      </ul>
+    </Component>
+  </div>
+</Floor>
+`;
+
+exports[`Floor is at the last level 1`] = `
+<Floor
+  firstLevel={false}
+  lastLevel={true}
+  level={1}
+>
+  <div>
+    <span>
+      Floor 
+      1
+    </span>
+    <Component
+      downButton={true}
+      upButton={false}
+    >
+      <ul>
+        <li>
+          Down
+        </li>
+      </ul>
+    </Component>
+  </div>
+</Floor>
+`;
