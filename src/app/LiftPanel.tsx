@@ -7,7 +7,6 @@ interface LiftPanelProps {
     highlightedButtons?: Set<number>;
     highlightButton?: (i: number) => () => void;
 }
-
 interface DefaultProps {
     highlightedButtons: Set<number>;
 }

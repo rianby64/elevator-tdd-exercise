@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Lift highlighs a pressed button 1`] = `
+<Lift
+  currentLevel={3}
+  floors={5}
+>
+  <div>
+    <LiftPanel
+      currentLevel={3}
+      floors={5}
+      highlightButton={[Function]}
+      highlightedButtons={
+        Set {
+          3,
+        }
+      }
+    >
+      <div>
+        <span>
+          Lift's panel
+        </span>
+        <ul>
+          <li
+            key="4"
+          >
+            <button
+              onClick={[Function]}
+            >
+              5
+            </button>
+          </li>
+          <li
+            key="3"
+          >
+            <button
+              onClick={[Function]}
+            >
+              4
+            </button>
+          </li>
+          <li
+            className="active"
+            key="2"
+          >
+            <button
+              className="highlight"
+              onClick={[Function]}
+            >
+              3
+            </button>
+          </li>
+          <li
+            key="1"
+          >
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
+          </li>
+          <li
+            key="0"
+          >
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
+          </li>
+        </ul>
+      </div>
+    </LiftPanel>
+  </div>
+</Lift>
+`;
+
 exports[`Lift highlighs the currentLevel 1`] = `
 <Lift
   currentLevel={3}
