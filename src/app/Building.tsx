@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 import { LiftPanel } from './LiftPanel';
-import { FloorPanel } from './FloorPanel';
+import { Floor } from './Floor';
 
 interface BuildingProps {
     floors: number;
@@ -18,6 +18,12 @@ export class Building extends React.Component<BuildingProps> {
         floors: 1,
     }
 
+    private createFloors(): JSX.Element[] {
+        return new Array(this.props.floors).fill(undefined).map((v: undefined, i: number): JSX.Element => {
+            return <Floor key={i}/>
+        });
+    }
+
     private renderOneFloor(): JSX.Element {
         return (
             <div>This is just a House</div>
@@ -29,18 +35,7 @@ export class Building extends React.Component<BuildingProps> {
             <div>
                 <span>Building</span>
                 <LiftPanel />
-                <div>
-                    <span>Floor 3</span>
-                    <FloorPanel />
-                </div>
-                <div>
-                    <span>Floor 2</span>
-                    <FloorPanel />
-                </div>
-                <div>
-                    <span>Floor 1</span>
-                    <FloorPanel />
-                </div>
+                {this.createFloors()}
             </div>
         );
     }

@@ -5,7 +5,7 @@ import { Building } from './Building';
 
 render(
     (
-        <Building />
+        <Building floors={3} />
     ),
     document.getElementById("root")
 );

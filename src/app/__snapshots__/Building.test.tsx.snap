@@ -32,51 +32,63 @@ exports[`Building draws three floors 1`] = `
         </ul>
       </div>
     </Component>
-    <div>
-      <span>
-        Floor 3
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
-    <div>
-      <span>
-        Floor 2
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
-    <div>
-      <span>
-        Floor 1
-      </span>
-      <Component>
-        <ul>
-          <li>
-            Up
-          </li>
-          <li>
-            Down
-          </li>
-        </ul>
-      </Component>
-    </div>
+    <Component
+      key="0"
+    >
+      <div>
+        <span>
+          Floor 3
+        </span>
+        <Component>
+          <ul>
+            <li>
+              Up
+            </li>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Component>
+    <Component
+      key="1"
+    >
+      <div>
+        <span>
+          Floor 3
+        </span>
+        <Component>
+          <ul>
+            <li>
+              Up
+            </li>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Component>
+    <Component
+      key="2"
+    >
+      <div>
+        <span>
+          Floor 3
+        </span>
+        <Component>
+          <ul>
+            <li>
+              Up
+            </li>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Component>
   </div>
 </Building>
 `;
