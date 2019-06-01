@@ -35,7 +35,7 @@ exports[`Building draws three floors 1`] = `
     <Floor
       firstLevel={false}
       key="2"
-      lastLevel={false}
+      lastLevel={true}
       level={3}
     >
       <div>
@@ -45,12 +45,9 @@ exports[`Building draws three floors 1`] = `
         </span>
         <Component
           downButton={true}
-          upButton={true}
+          upButton={false}
         >
           <ul>
-            <li>
-              Up
-            </li>
             <li>
               Down
             </li>
@@ -85,7 +82,7 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Floor>
     <Floor
-      firstLevel={false}
+      firstLevel={true}
       key="0"
       lastLevel={false}
       level={1}
@@ -96,15 +93,12 @@ exports[`Building draws three floors 1`] = `
           1
         </span>
         <Component
-          downButton={true}
+          downButton={false}
           upButton={true}
         >
           <ul>
             <li>
               Up
-            </li>
-            <li>
-              Down
             </li>
           </ul>
         </Component>
