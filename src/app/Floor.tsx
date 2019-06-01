@@ -4,15 +4,28 @@ import { FloorPanel } from './FloorPanel';
 
 interface FloorProps {
     level: number;
+    firstLevel?: boolean;
+    lastLevel?: boolean;
 }
 
-type FloorElement = React.ReactElement<FloorProps>;
+interface DefaultProps {
+    firstLevel: boolean;
+    lastLevel: boolean;
+}
 
-export const Floor = (props: FloorProps): FloorElement => {
-    return (
-        <div>
-            <span>Floor {props.level}</span>
-            <FloorPanel />
-        </div>
-    );
+export class Floor extends React.Component<FloorProps> {
+
+    public static defaultProps: DefaultProps = {
+        firstLevel: false,
+        lastLevel: false,
+    }
+
+    public render(): JSX.Element {
+        return (
+            <div>
+                <span>Floor {this.props.level}</span>
+                <FloorPanel />
+            </div>
+        );
+    }
 }

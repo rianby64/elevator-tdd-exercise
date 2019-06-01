@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Floor exists 1`] = `
-<Component
+<Floor
+  firstLevel={false}
+  lastLevel={false}
   level={1}
 >
   <div>
@@ -20,5 +22,5 @@ exports[`Floor exists 1`] = `
       </ul>
     </Component>
   </div>
-</Component>
+</Floor>
 `;
