@@ -3,17 +3,10 @@ import * as React from 'react';
 
 interface LiftPanelProps {
     floors: number;
-    currentLevel?: number;
-}
-interface DefaultProps {
     currentLevel: number;
 }
 
 export class LiftPanel extends React.Component<LiftPanelProps> {
-
-    public static defaultProps: DefaultProps = {
-        currentLevel: 1,
-    }
 
     private createButtons = (): JSX.Element[] => new Array(this.props.floors)
         .fill(undefined)

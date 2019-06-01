@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 
-import { LiftPanel } from './LiftPanel';
+import { Lift } from './Lift';
 import { Floor } from './Floor';
 
 interface BuildingProps {
@@ -41,7 +41,7 @@ export class Building extends React.Component<BuildingProps> {
         return this.props.floors == 1 ? this.renderOneFloor() : (
             <div>
                 <span>Building</span>
-                <LiftPanel floors={this.props.floors} />
+                <Lift floors={this.props.floors} />
                 {this.createFloors()}
             </div>
         );

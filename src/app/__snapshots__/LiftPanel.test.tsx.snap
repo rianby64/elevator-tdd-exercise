@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LiftPanel highlighs the currentLevel 1`] = `
+<LiftPanel
+  currentLevel={3}
+  floors={5}
+>
+  <div>
+    <span>
+      Lift's panel
+    </span>
+    <ul>
+      <li
+        key="4"
+      >
+        5
+      </li>
+      <li
+        key="3"
+      >
+        4
+      </li>
+      <li
+        className="active"
+        key="2"
+      >
+        3
+      </li>
+      <li
+        key="1"
+      >
+        2
+      </li>
+      <li
+        key="0"
+      >
+        1
+      </li>
+    </ul>
+  </div>
+</LiftPanel>
+`;

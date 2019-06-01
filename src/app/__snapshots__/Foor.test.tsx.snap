@@ -2,12 +2,15 @@
 
 exports[`Floor exists 1`] = `
 <Floor
+  currentLevel={1}
   firstLevel={false}
   lastLevel={false}
   level={1}
 >
   <div>
-    <span>
+    <span
+      className="active"
+    >
       Floor 
       1
     </span>
@@ -30,12 +33,15 @@ exports[`Floor exists 1`] = `
 
 exports[`Floor is at the first level 1`] = `
 <Floor
+  currentLevel={1}
   firstLevel={true}
   lastLevel={false}
   level={1}
 >
   <div>
-    <span>
+    <span
+      className="active"
+    >
       Floor 
       1
     </span>
@@ -55,12 +61,15 @@ exports[`Floor is at the first level 1`] = `
 
 exports[`Floor is at the last level 1`] = `
 <Floor
+  currentLevel={1}
   firstLevel={false}
   lastLevel={true}
   level={1}
 >
   <div>
-    <span>
+    <span
+      className="active"
+    >
       Floor 
       1
     </span>

@@ -8,35 +8,43 @@ exports[`Building draws three floors 1`] = `
     <span>
       Building
     </span>
-    <LiftPanel
+    <Lift
       currentLevel={1}
       floors={3}
     >
       <div>
-        <span>
-          Lift's panel
-        </span>
-        <ul>
-          <li
-            key="2"
-          >
-            3
-          </li>
-          <li
-            key="1"
-          >
-            2
-          </li>
-          <li
-            className="active"
-            key="0"
-          >
-            1
-          </li>
-        </ul>
+        <LiftPanel
+          currentLevel={1}
+          floors={3}
+        >
+          <div>
+            <span>
+              Lift's panel
+            </span>
+            <ul>
+              <li
+                key="2"
+              >
+                3
+              </li>
+              <li
+                key="1"
+              >
+                2
+              </li>
+              <li
+                className="active"
+                key="0"
+              >
+                1
+              </li>
+            </ul>
+          </div>
+        </LiftPanel>
       </div>
-    </LiftPanel>
+    </Lift>
     <Floor
+      currentLevel={1}
       firstLevel={false}
       key="2"
       lastLevel={true}
@@ -60,6 +68,7 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Floor>
     <Floor
+      currentLevel={1}
       firstLevel={false}
       key="1"
       lastLevel={false}
@@ -86,13 +95,16 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Floor>
     <Floor
+      currentLevel={1}
       firstLevel={true}
       key="0"
       lastLevel={false}
       level={1}
     >
       <div>
-        <span>
+        <span
+          className="active"
+        >
           Floor 
           1
         </span>
@@ -120,30 +132,38 @@ exports[`Building draws two floors 1`] = `
     <span>
       Building
     </span>
-    <LiftPanel
+    <Lift
       currentLevel={1}
       floors={2}
     >
       <div>
-        <span>
-          Lift's panel
-        </span>
-        <ul>
-          <li
-            key="1"
-          >
-            2
-          </li>
-          <li
-            className="active"
-            key="0"
-          >
-            1
-          </li>
-        </ul>
+        <LiftPanel
+          currentLevel={1}
+          floors={2}
+        >
+          <div>
+            <span>
+              Lift's panel
+            </span>
+            <ul>
+              <li
+                key="1"
+              >
+                2
+              </li>
+              <li
+                className="active"
+                key="0"
+              >
+                1
+              </li>
+            </ul>
+          </div>
+        </LiftPanel>
       </div>
-    </LiftPanel>
+    </Lift>
     <Floor
+      currentLevel={1}
       firstLevel={false}
       key="1"
       lastLevel={true}
@@ -167,13 +187,16 @@ exports[`Building draws two floors 1`] = `
       </div>
     </Floor>
     <Floor
+      currentLevel={1}
       firstLevel={true}
       key="0"
       lastLevel={false}
       level={1}
     >
       <div>
-        <span>
+        <span
+          className="active"
+        >
           Floor 
           1
         </span>
