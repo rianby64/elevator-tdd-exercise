@@ -24,17 +24,17 @@ test('Lift highlighs the currentLevel and shows the direction', (): void => {
 test('Lift highlighs a pressed button', (): void => {
     const el = (<Lift currentLevel={3} floors={5} />);
     const sh = mount(el);
-    sh.find('LiftPanel ul').findWhere(el => el.key() === '2').find('button').simulate('click');
+    sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '2').find('button').simulate('click');
     expect(sh).toMatchSnapshot();
 });
 
 test('Lift notifies the pressed button', (): void => {
-    let pressedButton: number = 0;
+    let pressedButton = 0;
     const onHighlightButton = (i: number): void => {
         pressedButton = i;
     }
     const el = (<Lift currentLevel={3} floors={5} onHighlightButton={onHighlightButton}/>);
     const sh = mount(el);
-    sh.find('LiftPanel ul').findWhere(el => el.key() === '2').find('button').simulate('click');
+    sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '2').find('button').simulate('click');
     expect(pressedButton).toBe(3);
 });

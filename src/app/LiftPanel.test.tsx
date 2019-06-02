@@ -20,7 +20,7 @@ test('LiftPanel highlights the pressed button', (): void => {
         highlightButton={highlightButton}/>);
 
     const sh = mount(el);
-    sh.findWhere(el => el.key() === '2').find('button').simulate('click');
+    sh.findWhere((el): boolean => el.key() === '2').find('button').simulate('click');
     expect(buttonPressed).toHaveLength(1);
     expect(buttonPressed[0]).toBe(3);
 });

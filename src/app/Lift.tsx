@@ -43,9 +43,9 @@ export class Lift extends React.Component<LiftProps & DefaultProps> {
         }
     }
 
-    public componentDidUpdate() {
+    public componentDidUpdate(): void {
         if (this.state.highlightedButtons.has(this.props.currentLevel)) {
-            this.setState((state: LiftState) => {
+            this.setState((state: LiftState): LiftState => {
                 const highlightedButtons = new Set(state.highlightedButtons)
                 highlightedButtons.delete(this.props.currentLevel);
                 return {...state, highlightedButtons: highlightedButtons}

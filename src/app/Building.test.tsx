@@ -28,6 +28,6 @@ test('Lift in Building goes from first to second floor', (done): void => {
     }
     const el = (<Building floors={3} DELAY={1} onLiftAtFloor={onLiftAtFloor} />);
     const sh = mount(el);
-    sh.find('LiftPanel ul').findWhere(el => el.key() === '1').find('button').simulate('click');
+    sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '1').find('button').simulate('click');
     expect(sh).toMatchSnapshot();
 });
