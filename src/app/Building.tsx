@@ -38,9 +38,17 @@ export class Building extends React.Component<BuildingProps & DefaultProps> {
         (this.state.lift.currentLevel !== i) && setTimeout((): void => {
             if (this.state.lift.currentLevel !== i) {
                 this.setState((state: BuildState): BuildState => {
-                    return {...state, lift: { currentLevel: i }};
+                    let nextFloor = state.lift.currentLevel;
+                    if (state.lift.currentLevel < i) {
+                        nextFloor++;
+                    }
+                    if (state.lift.currentLevel > i) {
+                        nextFloor--;
+                    }
+                    this.props.onLiftAtFloor && this.props.onLiftAtFloor(nextFloor);
+                    return {...state, lift: { currentLevel: nextFloor }};
                 });
-                this.props.onLiftAtFloor && this.props.onLiftAtFloor(i);
+                this.moveLiftToFloor(i);
             }
         }, this.props.DELAY);
     }

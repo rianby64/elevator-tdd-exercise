@@ -31,3 +31,19 @@ test('Lift in Building goes from first to second floor', (done): void => {
     sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '1').find('button').simulate('click');
     expect(sh).toMatchSnapshot();
 });
+
+test('Lift in Building goes from first to third floor passing the second', (done): void => {
+    const visited: number[] = [];
+    const onLiftAtFloor = (i: number): void => {
+        visited.push(i);
+        if (visited.length === 2) {
+            expect(visited[0]).toBe(2)
+            expect(visited[1]).toBe(3);
+            done();
+        }
+    }
+    const el = (<Building floors={3} DELAY={1} onLiftAtFloor={onLiftAtFloor} />);
+    const sh = mount(el);
+    sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '2').find('button').simulate('click');
+    expect(sh).toMatchSnapshot();
+});
