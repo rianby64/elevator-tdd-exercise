@@ -10,11 +10,7 @@ exports[`Lift highlighs a pressed button 1`] = `
       currentLevel={3}
       floors={5}
       highlightButton={[Function]}
-      highlightedButtons={
-        Set {
-          3,
-        }
-      }
+      highlightedButtons={Set {}}
     >
       <div>
         <span>
@@ -44,7 +40,6 @@ exports[`Lift highlighs a pressed button 1`] = `
             key="2"
           >
             <button
-              className="highlight"
               onClick={[Function]}
             >
               3

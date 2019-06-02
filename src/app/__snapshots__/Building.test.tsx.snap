@@ -2,6 +2,7 @@
 
 exports[`Building draws three floors 1`] = `
 <Building
+  DELAY={1000}
   floors={3}
 >
   <div>
@@ -11,6 +12,7 @@ exports[`Building draws three floors 1`] = `
     <Lift
       currentLevel={1}
       floors={3}
+      onHighlightButton={[Function]}
     >
       <div>
         <LiftPanel
@@ -140,6 +142,7 @@ exports[`Building draws three floors 1`] = `
 
 exports[`Building draws two floors 1`] = `
 <Building
+  DELAY={1000}
   floors={2}
 >
   <div>
@@ -149,6 +152,7 @@ exports[`Building draws two floors 1`] = `
     <Lift
       currentLevel={1}
       floors={2}
+      onHighlightButton={[Function]}
     >
       <div>
         <LiftPanel
@@ -242,10 +246,157 @@ exports[`Building draws two floors 1`] = `
 
 exports[`Building exists 1`] = `
 <Building
+  DELAY={1000}
   floors={1}
 >
   <div>
     This is just a House
+  </div>
+</Building>
+`;
+
+exports[`Lift in Building goes from first to second floor 1`] = `
+<Building
+  DELAY={1}
+  floors={3}
+  onLiftAtFloor={[Function]}
+>
+  <div>
+    <span>
+      Building
+    </span>
+    <Lift
+      currentLevel={1}
+      floors={3}
+      onHighlightButton={[Function]}
+    >
+      <div>
+        <LiftPanel
+          currentLevel={1}
+          floors={3}
+          highlightButton={[Function]}
+          highlightedButtons={
+            Set {
+              2,
+            }
+          }
+        >
+          <div>
+            <span>
+              Lift's panel
+            </span>
+            <ul>
+              <li
+                key="2"
+              >
+                <button
+                  onClick={[Function]}
+                >
+                  3
+                </button>
+              </li>
+              <li
+                key="1"
+              >
+                <button
+                  className="highlight"
+                  onClick={[Function]}
+                >
+                  2
+                </button>
+              </li>
+              <li
+                className="active"
+                key="0"
+              >
+                <button
+                  onClick={[Function]}
+                >
+                  1
+                </button>
+              </li>
+            </ul>
+          </div>
+        </LiftPanel>
+      </div>
+    </Lift>
+    <Floor
+      currentLevel={1}
+      firstLevel={false}
+      key="2"
+      lastLevel={true}
+      level={3}
+    >
+      <div>
+        <span>
+          Floor 
+          3
+        </span>
+        <Component
+          downButton={true}
+          upButton={false}
+        >
+          <ul>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Floor>
+    <Floor
+      currentLevel={1}
+      firstLevel={false}
+      key="1"
+      lastLevel={false}
+      level={2}
+    >
+      <div>
+        <span>
+          Floor 
+          2
+        </span>
+        <Component
+          downButton={true}
+          upButton={true}
+        >
+          <ul>
+            <li>
+              Up
+            </li>
+            <li>
+              Down
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Floor>
+    <Floor
+      currentLevel={1}
+      firstLevel={true}
+      key="0"
+      lastLevel={false}
+      level={1}
+    >
+      <div>
+        <span
+          className="active"
+        >
+          Floor 
+          1
+        </span>
+        <Component
+          downButton={false}
+          upButton={true}
+        >
+          <ul>
+            <li>
+              Up
+            </li>
+          </ul>
+        </Component>
+      </div>
+    </Floor>
   </div>
 </Building>
 `;

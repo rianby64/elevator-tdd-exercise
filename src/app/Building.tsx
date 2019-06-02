@@ -6,10 +6,13 @@ import { Floor } from './Floor';
 
 interface BuildingProps {
     floors: number;
+    DELAY?: number;
+    onLiftAtFloor?: (i: number) => void;
 }
 
 interface DefaultProps {
     floors: number;
+    DELAY: number;
 }
 
 interface BuildState {
@@ -18,10 +21,11 @@ interface BuildState {
     };
 }
 
-export class Building extends React.Component<BuildingProps> {
+export class Building extends React.Component<BuildingProps & DefaultProps> {
 
     public static defaultProps: DefaultProps = {
         floors: 1,
+        DELAY: 1000,
     }
 
     public state: BuildState = {
@@ -30,16 +34,35 @@ export class Building extends React.Component<BuildingProps> {
         }
     }
 
+    private moveLiftToFloor = (i: number): void => {
+        (this.state.lift.currentLevel !== i) && setTimeout((): void => {
+            if (this.state.lift.currentLevel !== i) {
+                this.setState((state: BuildState): BuildState => {
+                    return {...state, lift: { currentLevel: i }};
+                });
+                this.props.onLiftAtFloor && this.props.onLiftAtFloor(i);
+            }
+        }, this.props.DELAY);
+    }
+
     private createFloors = (): JSX.Element[] => new Array(this.props.floors)
         .fill(undefined)
         .map((v: undefined, i: number, arr: undefined[]): JSX.Element => {
             if (i === 0) {
-                return <Floor key={i} level={i + 1} firstLevel={true} />;
+                return <Floor
+                    currentLevel={this.state.lift.currentLevel}
+                    key={i} level={i + 1}
+                    firstLevel={true} />;
             }
             if (i + 1 === arr.length) {
-                return <Floor key={i} level={i + 1} lastLevel={true} />;
+                return <Floor
+                    currentLevel={this.state.lift.currentLevel}
+                    key={i} level={i + 1}
+                    lastLevel={true} />;
             }
-            return <Floor key={i} level={i + 1}/>;
+            return <Floor
+                currentLevel={this.state.lift.currentLevel}
+                key={i} level={i + 1}/>;
         })
         .reverse()
 
@@ -54,6 +77,7 @@ export class Building extends React.Component<BuildingProps> {
             <div>
                 <span>Building</span>
                 <Lift
+                    onHighlightButton={this.moveLiftToFloor}
                     floors={this.props.floors}
                     currentLevel={this.state.lift.currentLevel} />
                 {this.createFloors()}
