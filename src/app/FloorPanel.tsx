@@ -4,6 +4,8 @@ import * as React from 'react';
 interface FloorPanelProps {
     upButton: boolean;
     downButton: boolean;
+    callLift?: () => void;
+    highlight?: boolean;
 }
 
 type FloorPanelElement = React.ReactElement<FloorPanelProps>;
@@ -13,9 +15,9 @@ export const FloorPanel = (props: FloorPanelProps): FloorPanelElement => {
         return (<div></div>);
     }
     return (
-        <ul>
-            {props.upButton && (<li>Up</li>)}
-            {props.downButton && (<li>Down</li>)}
+        <ul className={props.highlight ? "highlight" : undefined}>
+            {props.upButton && (<button onClick={props.callLift}>Up</button>)}
+            {props.downButton && (<button onClick={props.callLift}>Down</button>)}
         </ul>
     );
 }

@@ -19,6 +19,7 @@ interface BuildState {
     lift: {
         currentLevel: number;
     };
+    highlightedFloors: Set<number>;
 }
 
 export class Building extends React.Component<BuildingProps & DefaultProps> {
@@ -31,13 +32,15 @@ export class Building extends React.Component<BuildingProps & DefaultProps> {
     public state: BuildState = {
         lift: {
             currentLevel: 1,
-        }
+        },
+        highlightedFloors: new Set([])
     }
 
     private moveLiftToFloor = (i: number): void => {
         (this.state.lift.currentLevel !== i) && setTimeout((): void => {
             if (this.state.lift.currentLevel !== i) {
                 this.setState((state: BuildState): BuildState => {
+                    const highlightedFloors = new Set(state.highlightedFloors);
                     let nextFloor = state.lift.currentLevel;
                     if (state.lift.currentLevel < i) {
                         nextFloor++;
@@ -46,11 +49,28 @@ export class Building extends React.Component<BuildingProps & DefaultProps> {
                         nextFloor--;
                     }
                     this.props.onLiftAtFloor && this.props.onLiftAtFloor(nextFloor);
-                    return {...state, lift: { currentLevel: nextFloor }};
+                    if (highlightedFloors.has(nextFloor)) {
+                        highlightedFloors.delete(nextFloor);
+                    }
+                    return {...state,
+                        highlightedFloors,
+                        lift: { currentLevel: nextFloor }};
                 });
                 this.moveLiftToFloor(i);
             }
         }, this.props.DELAY);
+    }
+
+    private callLiftFromFloor = (i: number): () => void => {
+        return (): void => {
+            if (this.state.lift.currentLevel !== i) {
+                this.setState((state: BuildState): BuildState => {
+                    const highlightedFloors = new Set([...state.highlightedFloors, i]);
+                    return {...state, highlightedFloors: highlightedFloors};
+                });
+                this.moveLiftToFloor(i);
+            }
+        }
     }
 
     private createFloors = (): JSX.Element[] => new Array(this.props.floors)
@@ -58,17 +78,23 @@ export class Building extends React.Component<BuildingProps & DefaultProps> {
         .map((v: undefined, i: number, arr: undefined[]): JSX.Element => {
             if (i === 0) {
                 return <Floor
+                    highlight={this.state.highlightedFloors.has(i + 1)}
+                    callLift={this.callLiftFromFloor(i + 1)}
                     currentLevel={this.state.lift.currentLevel}
                     key={i} level={i + 1}
                     firstLevel={true} />;
             }
             if (i + 1 === arr.length) {
                 return <Floor
+                    highlight={this.state.highlightedFloors.has(i + 1)}
+                    callLift={this.callLiftFromFloor(i + 1)}
                     currentLevel={this.state.lift.currentLevel}
                     key={i} level={i + 1}
                     lastLevel={true} />;
             }
             return <Floor
+                highlight={this.state.highlightedFloors.has(i + 1)}
+                callLift={this.callLiftFromFloor(i + 1)}
                 currentLevel={this.state.lift.currentLevel}
                 key={i} level={i + 1}/>;
         })

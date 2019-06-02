@@ -7,6 +7,8 @@ interface FloorProps {
     firstLevel?: boolean;
     lastLevel?: boolean;
     currentLevel?: number;
+    callLift?: () => void;
+    highlight?: boolean;
 }
 
 interface DefaultProps {
@@ -29,6 +31,8 @@ export class Floor extends React.Component<FloorProps> {
                 <span className={this.props.currentLevel === this.props.level ?
                     "active" : undefined}>Floor {this.props.level}</span>
                 <FloorPanel
+                    callLift={this.props.callLift}
+                    highlight={this.props.highlight}
                     upButton={!this.props.lastLevel}
                     downButton={!this.props.firstLevel} />
             </div>

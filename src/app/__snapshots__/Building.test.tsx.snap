@@ -60,8 +60,10 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Lift>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="2"
       lastLevel={true}
       level={3}
@@ -72,11 +74,15 @@ exports[`Building draws three floors 1`] = `
           3
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={false}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -84,8 +90,10 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="1"
       lastLevel={false}
       level={2}
@@ -96,14 +104,20 @@ exports[`Building draws three floors 1`] = `
           2
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -111,8 +125,10 @@ exports[`Building draws three floors 1`] = `
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={true}
+      highlight={false}
       key="0"
       lastLevel={false}
       level={1}
@@ -125,11 +141,15 @@ exports[`Building draws three floors 1`] = `
           1
         </span>
         <Component
+          callLift={[Function]}
           downButton={false}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
           </ul>
@@ -191,8 +211,10 @@ exports[`Building draws two floors 1`] = `
       </div>
     </Lift>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="1"
       lastLevel={true}
       level={2}
@@ -203,11 +225,15 @@ exports[`Building draws two floors 1`] = `
           2
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={false}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -215,8 +241,10 @@ exports[`Building draws two floors 1`] = `
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={true}
+      highlight={false}
       key="0"
       lastLevel={false}
       level={1}
@@ -229,11 +257,15 @@ exports[`Building draws two floors 1`] = `
           1
         </span>
         <Component
+          callLift={[Function]}
           downButton={false}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
           </ul>
@@ -321,8 +353,10 @@ exports[`Lift in Building goes from first to second floor 1`] = `
       </div>
     </Lift>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="2"
       lastLevel={true}
       level={3}
@@ -333,11 +367,15 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           3
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={false}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -345,8 +383,10 @@ exports[`Lift in Building goes from first to second floor 1`] = `
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="1"
       lastLevel={false}
       level={2}
@@ -357,14 +397,20 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           2
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -372,8 +418,10 @@ exports[`Lift in Building goes from first to second floor 1`] = `
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={true}
+      highlight={false}
       key="0"
       lastLevel={false}
       level={1}
@@ -386,11 +434,15 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           1
         </span>
         <Component
+          callLift={[Function]}
           downButton={false}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
           </ul>
@@ -467,8 +519,10 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
       </div>
     </Lift>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="2"
       lastLevel={true}
       level={3}
@@ -479,11 +533,15 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           3
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={false}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -491,8 +549,10 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={false}
+      highlight={false}
       key="1"
       lastLevel={false}
       level={2}
@@ -503,14 +563,20 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           2
         </span>
         <Component
+          callLift={[Function]}
           downButton={true}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Down
             </li>
           </ul>
@@ -518,8 +584,10 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
       </div>
     </Floor>
     <Floor
+      callLift={[Function]}
       currentLevel={1}
       firstLevel={true}
+      highlight={false}
       key="0"
       lastLevel={false}
       level={1}
@@ -532,11 +600,15 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           1
         </span>
         <Component
+          callLift={[Function]}
           downButton={false}
+          highlight={false}
           upButton={true}
         >
           <ul>
-            <li>
+            <li
+              onClick={[Function]}
+            >
               Up
             </li>
           </ul>
