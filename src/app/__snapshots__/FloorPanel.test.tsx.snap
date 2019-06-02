@@ -6,9 +6,9 @@ exports[`FloorPanel has down button 1`] = `
   upButton={false}
 >
   <ul>
-    <li>
+    <button>
       Down
-    </li>
+    </button>
   </ul>
 </Component>
 `;
@@ -28,9 +28,9 @@ exports[`FloorPanel has only up button 1`] = `
   upButton={true}
 >
   <ul>
-    <li>
+    <button>
       Up
-    </li>
+    </button>
   </ul>
 </Component>
 `;
@@ -41,12 +41,12 @@ exports[`FloorPanel has up and down buttons 1`] = `
   upButton={true}
 >
   <ul>
-    <li>
+    <button>
       Up
-    </li>
-    <li>
+    </button>
+    <button>
       Down
-    </li>
+    </button>
   </ul>
 </Component>
 `;

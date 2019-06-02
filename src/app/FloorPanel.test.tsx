@@ -36,6 +36,6 @@ test('FloorPanel allows to call the lift', (): void => {
         upButton={true} downButton={false}
         callLift={callLift} />);
     const sh = mount(el);
-    sh.find('li').simulate('click');
+    sh.find('button').simulate('click');
     expect(liftCalled).toBe(true);
 });

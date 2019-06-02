@@ -80,11 +80,11 @@ exports[`Building draws three floors 1`] = `
           upButton={false}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -110,16 +110,16 @@ exports[`Building draws three floors 1`] = `
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
-            <li
+            </button>
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -147,11 +147,11 @@ exports[`Building draws three floors 1`] = `
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -231,11 +231,11 @@ exports[`Building draws two floors 1`] = `
           upButton={false}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -263,11 +263,11 @@ exports[`Building draws two floors 1`] = `
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -373,11 +373,11 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           upButton={false}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -403,16 +403,16 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
-            <li
+            </button>
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -440,11 +440,11 @@ exports[`Lift in Building goes from first to second floor 1`] = `
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -539,11 +539,11 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           upButton={false}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -569,16 +569,16 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
-            <li
+            </button>
+            <button
               onClick={[Function]}
             >
               Down
-            </li>
+            </button>
           </ul>
         </Component>
       </div>
@@ -606,11 +606,11 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
           upButton={true}
         >
           <ul>
-            <li
+            <button
               onClick={[Function]}
             >
               Up
-            </li>
+            </button>
           </ul>
         </Component>
       </div>

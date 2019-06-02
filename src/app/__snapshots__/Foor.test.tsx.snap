@@ -19,12 +19,12 @@ exports[`Floor exists 1`] = `
       upButton={true}
     >
       <ul>
-        <li>
+        <button>
           Up
-        </li>
-        <li>
+        </button>
+        <button>
           Down
-        </li>
+        </button>
       </ul>
     </Component>
   </div>
@@ -50,9 +50,9 @@ exports[`Floor is at the first level 1`] = `
       upButton={true}
     >
       <ul>
-        <li>
+        <button>
           Up
-        </li>
+        </button>
       </ul>
     </Component>
   </div>
@@ -78,9 +78,9 @@ exports[`Floor is at the last level 1`] = `
       upButton={false}
     >
       <ul>
-        <li>
+        <button>
           Down
-        </li>
+        </button>
       </ul>
     </Component>
   </div>
