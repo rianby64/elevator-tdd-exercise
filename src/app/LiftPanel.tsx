@@ -5,7 +5,7 @@ interface LiftPanelProps {
     floors: number;
     currentLevel: number;
     highlightedButtons?: Set<number>;
-    highlightButton?: (i: number) => () => void;
+    callLift?: (i: number) => () => void;
 }
 interface DefaultProps {
     highlightedButtons: Set<number>;
@@ -27,7 +27,7 @@ export class LiftPanel extends React.Component<LiftPanelProps & DefaultProps> {
                 <button
                     className={this.props.highlightedButtons.has(i + 1) ?
                         "highlight" : undefined}
-                    onClick={this.props.highlightButton && this.props.highlightButton(i + 1)}>{i + 1}</button>
+                    onClick={this.props.callLift && this.props.callLift(i + 1)}>{i + 1}</button>
             </li>;
         })
         .reverse()

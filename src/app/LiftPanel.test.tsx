@@ -11,13 +11,13 @@ test('LiftPanel highlights the currentLevel', (): void => {
 
 test('LiftPanel highlights the pressed button', (): void => {
     const buttonPressed: number[] = [];
-    const highlightButton = (i: number): () => void =>
+    const callLift = (i: number): () => void =>
         (): void => { buttonPressed.push(i); }
 
     const el = (<LiftPanel
         currentLevel={3}
         floors={5}
-        highlightButton={highlightButton}/>);
+        callLift={callLift}/>);
 
     const sh = mount(el);
     sh.findWhere((el): boolean => el.key() === '2').find('button').simulate('click');

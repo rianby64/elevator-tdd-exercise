@@ -7,9 +7,9 @@ exports[`Lift highlighs a pressed button 1`] = `
 >
   <div>
     <LiftPanel
+      callLift={[Function]}
       currentLevel={3}
       floors={5}
-      highlightButton={[Function]}
       highlightedButtons={Set {}}
     >
       <div>
@@ -77,9 +77,9 @@ exports[`Lift highlighs the currentLevel 1`] = `
 >
   <div>
     <LiftPanel
+      callLift={[Function]}
       currentLevel={3}
       floors={5}
-      highlightButton={[Function]}
       highlightedButtons={Set {}}
     >
       <div>
@@ -152,9 +152,9 @@ exports[`Lift highlighs the currentLevel and shows the direction 1`] = `
       DOWN
     </span>
     <LiftPanel
+      callLift={[Function]}
       currentLevel={3}
       floors={5}
-      highlightButton={[Function]}
       highlightedButtons={Set {}}
     >
       <div>

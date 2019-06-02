@@ -30,10 +30,10 @@ test('Lift highlighs a pressed button', (): void => {
 
 test('Lift notifies the pressed button', (): void => {
     let pressedButton = 0;
-    const onHighlightButton = (i: number): void => {
+    const onCallLift = (i: number): void => {
         pressedButton = i;
     }
-    const el = (<Lift currentLevel={3} floors={5} onHighlightButton={onHighlightButton}/>);
+    const el = (<Lift currentLevel={3} floors={5} onCallLift={onCallLift}/>);
     const sh = mount(el);
     sh.find('LiftPanel ul').findWhere((el): boolean => el.key() === '2').find('button').simulate('click');
     expect(pressedButton).toBe(3);

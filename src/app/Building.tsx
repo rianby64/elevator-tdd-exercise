@@ -85,7 +85,7 @@ export class Building extends React.Component<BuildingProps & DefaultProps> {
             <div>
                 <span>Building</span>
                 <Lift
-                    onHighlightButton={this.moveLiftToFloor}
+                    onCallLift={this.moveLiftToFloor}
                     floors={this.props.floors}
                     currentLevel={this.state.lift.currentLevel} />
                 {this.createFloors()}

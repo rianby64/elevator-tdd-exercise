@@ -12,13 +12,13 @@ exports[`Building draws three floors 1`] = `
     <Lift
       currentLevel={1}
       floors={3}
-      onHighlightButton={[Function]}
+      onCallLift={[Function]}
     >
       <div>
         <LiftPanel
+          callLift={[Function]}
           currentLevel={1}
           floors={3}
-          highlightButton={[Function]}
           highlightedButtons={Set {}}
         >
           <div>
@@ -152,13 +152,13 @@ exports[`Building draws two floors 1`] = `
     <Lift
       currentLevel={1}
       floors={2}
-      onHighlightButton={[Function]}
+      onCallLift={[Function]}
     >
       <div>
         <LiftPanel
+          callLift={[Function]}
           currentLevel={1}
           floors={2}
-          highlightButton={[Function]}
           highlightedButtons={Set {}}
         >
           <div>
@@ -268,13 +268,13 @@ exports[`Lift in Building goes from first to second floor 1`] = `
     <Lift
       currentLevel={1}
       floors={3}
-      onHighlightButton={[Function]}
+      onCallLift={[Function]}
     >
       <div>
         <LiftPanel
+          callLift={[Function]}
           currentLevel={1}
           floors={3}
-          highlightButton={[Function]}
           highlightedButtons={
             Set {
               2,
@@ -414,13 +414,13 @@ exports[`Lift in Building goes from first to third floor passing the second 1`] 
     <Lift
       currentLevel={1}
       floors={3}
-      onHighlightButton={[Function]}
+      onCallLift={[Function]}
     >
       <div>
         <LiftPanel
+          callLift={[Function]}
           currentLevel={1}
           floors={3}
-          highlightButton={[Function]}
           highlightedButtons={
             Set {
               3,
